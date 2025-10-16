@@ -1,0 +1,42 @@
+[
+  {
+    "train_id": "ifykyk",
+    "train_no": 12345,
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+    "station_times": {
+      "bangalore": "13:50:00",
+      "jaipur": "13:50:00",
+      "delhi": "13:50:00"
+    },
+    "stations": [
+      "bangalore",
+      "jaipur",
+      "delhi"
+    ]
+  },
+  {
+    "train_id": "abcd",
+    "train_no": 54321,
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+    "station_times": {
+      "bihar": "13:50:00",
+      "jharkhand": "13:50:00",
+      "odisha": "13:50:00"
+    },
+    "stations": [
+      "bihar",
+      "jharkhand",
+      "odisha"
+    ]
+  }
+]
