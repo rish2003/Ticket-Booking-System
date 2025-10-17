@@ -1,24 +1,45 @@
 package ticket.booking.entities;
 
-public class Ticket {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.sql.Date;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+public class Ticket{
+
     private String ticketId;
+
     private String userId;
+
     private String source;
+
     private String destination;
+
+    private String dateOfTravel;
+
     private Train train;
 
     public Ticket(){}
-    public Ticket(String ticketId, String userId, String source, String destination,String dateOfTravel, Train train){
+
+    public Ticket(String ticketId, String userId, String source, String destination, String dateOfTravel, Train train){
         this.ticketId = ticketId;
         this.userId = userId;
         this.source = source;
         this.destination = destination;
-        this.dateOftravel = dateOfTravel;
+        this.dateOfTravel = dateOfTravel;
         this.train = train;
     }
 
     public String getTicketInfo(){
-        return String.format("Ticket ID: %s belongs to User %s from %s to %s on %s",ticketId,userId,source,destination,dateOfTravel);
+        return String.format("Ticket ID: %s belongs to User %s from %s to %s on %s", ticketId, userId, source, destination, dateOfTravel);
     }
 
     public String getTicketId(){
@@ -28,6 +49,11 @@ public class Ticket {
     public void setTicketId(String ticketId){
         this.ticketId = ticketId;
     }
+
+    public String getSource(){
+        return source;
+    }
+
     public void setSource(String source){
         this.source = source;
     }
@@ -51,6 +77,7 @@ public class Ticket {
     public String getDateOfTravel(){
         return dateOfTravel;
     }
+
     public void setDateOfTravel(String dateOfTravel){
         this.dateOfTravel = dateOfTravel;
     }
@@ -62,4 +89,5 @@ public class Ticket {
     public void setTrain(Train train){
         this.train = train;
     }
+
 }
